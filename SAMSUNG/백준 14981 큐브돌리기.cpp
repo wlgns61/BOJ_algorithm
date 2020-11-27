@@ -11,20 +11,20 @@ info cube[3][3][3];
 info tmp[3][3][3];
 
 void copy() {
-	for (int h = 0; h < 3; h++)  //³ôÀÌ
+	for (int h = 0; h < 3; h++)  //ë†’ì´
 		for (int x = 0; x < 3; x++)  //x
 			for (int y = 0; y < 3; y++)  //y
 				tmp[h][x][y] = cube[h][x][y];
 }
 
 void init() {
-	for (int h = 0; h < 3; h++)  //³ôÀÌ
+	for (int h = 0; h < 3; h++)  //ë†’ì´
 		for (int x = 0; x < 3; x++)  //x
 			for (int y = 0; y < 3; y++)  //y
 				cube[h][x][y] = { 'r','o','b','g','w','y' };
 }
 
-void rotate_front_back(int x, char absdir) { //Àý´ëÀû À§Ä¡
+void rotate_front_back(int x, char absdir) { //ì ˆëŒ€ì  ìœ„ì¹˜
 	if (absdir == '+') 
 		for (int h = 0; h < 3; h++) 
 			for (int y = 0; y < 3; y++) {
@@ -41,7 +41,7 @@ void rotate_front_back(int x, char absdir) { //Àý´ëÀû À§Ä¡
 			}
 }
 
-void rotate_right_left(int y, char absdir) { //Àý´ëÀû À§Ä¡
+void rotate_right_left(int y, char absdir) { //ì ˆëŒ€ì  ìœ„ì¹˜
 	if (absdir == '+')
 		for (int h = 0; h < 3; h++)
 			for (int x = 0; x < 3; x++) {
@@ -58,7 +58,7 @@ void rotate_right_left(int y, char absdir) { //Àý´ëÀû À§Ä¡
 			}
 }
 
-void rotate_up_down(int h, char absdir) { //Àý´ëÀû À§Ä¡
+void rotate_up_down(int h, char absdir) { //ì ˆëŒ€ì  ìœ„ì¹˜
 	if (absdir == '+')
 		for (int x = 0; x < 3; x++)
 			for (int y = 0; y < 3; y++) {
